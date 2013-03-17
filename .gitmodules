@@ -1,0 +1,18 @@
+[submodule "submodules/tagbar"]
+	path = submodules/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "submodules/neocomplcache"]
+	path = submodules/neocomplcache
+	url = https://github.com/Shougo/neocomplcache.git
+[submodule "submodules/nerdtree"]
+	path = submodules/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "submodules/vim-javascript"]
+	path = submodules/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "submodules/vim-powerline"]
+	path = submodules/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
+[submodule "submodules/cocoa.vim"]
+	path = submodules/cocoa.vim
+	url = https://github.com/msanders/cocoa.vim.git
