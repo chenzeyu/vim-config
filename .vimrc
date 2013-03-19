@@ -1,9 +1,18 @@
 set nocompatible
 set textwidth=79
 set nu
+set incsearch
+
+"hlsearch setting
+nnoremap <CR> :noh<CR><CR>
+set hlsearch
+
+set foldmethod=syntax
+set foldlevel=99
 syntax on
 filetype on
-set autoindent
+
+"backup & swp setting
 set backup
 set dir=~/.vim/swp
 set backupdir=~/.vim/backup
@@ -25,17 +34,14 @@ let g:neocomplcache_enable_underbar_completion = 1
 " Sets minimum char length of syntax keyword.
 let g:neocomplcache_min_syntax_length = 3
 
-" Enable omni completion. Not required if they are already set elsewhere in
-" .vimrc
+" Enable omni completion. Not required if they are already set elsewhere in .vimrc
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
-set smartindent
 set cindent
-set shiftwidth=4
 set showmatch
 set tabstop=2
 set shiftwidth=2
