@@ -2,15 +2,17 @@ set nocompatible
 set textwidth=79
 set nu
 set incsearch
-
+set autoindent
 "hlsearch setting
 nnoremap <CR> :noh<CR><CR>
 set hlsearch
-
+colorscheme smyck
 set foldmethod=syntax
 set foldlevel=99
 syntax on
 filetype on
+filetype plugin on
+filetype indent on
 
 "backup & swp setting
 set backup
@@ -72,4 +74,6 @@ autocmd BufWinLeave * call clearmatches()
 map <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <F3> :TagbarToggle<CR>
 
+"macvim
+set guifont=Monaco:h14
 execute pathogen#infect('~/.vim/submodules/')
