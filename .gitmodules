@@ -22,3 +22,6 @@
 [submodule "submodules/vim-rails"]
 	path = submodules/vim-rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule "submodules/autoclose"]
+	path = submodules/autoclose
+	url = https://github.com/Townk/vim-autoclose
