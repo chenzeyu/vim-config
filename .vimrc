@@ -11,9 +11,7 @@ set foldmethod=syntax
 set foldlevel=99
 syntax on
 filetype on
-filetype plugin on
-filetype indent on
-
+filetype plugin indent on
 "backup & swp setting
 set backup
 set dir=~/.vim/swp
@@ -35,7 +33,11 @@ let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion = 1
 " Sets minimum char length of syntax keyword.
 let g:neocomplcache_min_syntax_length = 3
-
+" select using enter without inserting a new line
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
+endfunction
 " Enable omni completion. Not required if they are already set elsewhere in .vimrc
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -59,6 +61,7 @@ let g:tagbar_left = 1
 
 "neocomplcache setting
 let g:neocomplcache_enable_at_startup = 1
+"tab completion
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 set laststatus=2
 
@@ -76,4 +79,5 @@ nnoremap <silent> <F3> :TagbarToggle<CR>
 
 "macvim
 set guifont=Monaco:h14
+set transparency=11
 execute pathogen#infect('~/.vim/submodules/')
