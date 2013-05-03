@@ -5,6 +5,7 @@ set incsearch
 set autoindent
 "hlsearch setting
 nnoremap <CR> :noh<CR><CR>
+nmap gg=G gg=G''
 set hlsearch
 colorscheme smyck
 set foldmethod=syntax
@@ -72,12 +73,16 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-
+"F4 clear trailling spaces
+nnoremap <silent> <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 "nerdtree
 map <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <F3> :TagbarToggle<CR>
 
 "macvim
 set guifont=Monaco:h14
-set transparency=11
+if has("gui_running")
+  set transparency=11
+  set guioptions=e
+endif
 execute pathogen#infect('~/.vim/submodules/')
