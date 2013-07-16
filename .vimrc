@@ -8,6 +8,7 @@ nnoremap <CR> :noh<CR><CR>
 nmap gg=G gg=G''
 set hlsearch
 colorscheme smyck
+"colorscheme Monokai-Refined
 set foldmethod=syntax
 set foldlevel=99
 syntax on
