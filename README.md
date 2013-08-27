@@ -7,5 +7,5 @@
     git pull --recursive-submodules
 
 ##rebuild
-    git clone --recursive git:repo
+    git clone --recursive git@github.com:chenzeyu/vim-config.git
 
