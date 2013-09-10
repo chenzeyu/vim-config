@@ -28,3 +28,6 @@
 [submodule "submodules/endwise"]
 	path = submodules/endwise
 	url = git://github.com/tpope/vim-endwise.git
+[submodule "submodules/command-t"]
+	path = submodules/command-t
+	url = git://git.wincent.com/command-t.git

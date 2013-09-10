@@ -86,4 +86,9 @@ if has("gui_running")
   set transparency=11
   set guioptions=e
 endif
+if has("gui_macvim")
+  macmenu &File.New\ Tab key=<nop>
+  map <D-r> :CommandT<CR>
+endif
+
 execute pathogen#infect('~/.vim/submodules/')
