@@ -31,3 +31,6 @@
 [submodule "submodules/command-t"]
 	path = submodules/command-t
 	url = git://git.wincent.com/command-t.git
+[submodule "submodules/vim-backbone"]
+	path = submodules/vim-backbone
+	url = https://github.com/mklabs/vim-backbone.git

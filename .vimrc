@@ -7,7 +7,7 @@ set autoindent
 nnoremap <CR> :noh<CR><CR>
 nmap gg=G gg=G''
 set hlsearch
-colorscheme smyck
+"colorscheme smyck
 "colorscheme Monokai-Refined
 set foldmethod=syntax
 set foldlevel=99
@@ -19,6 +19,7 @@ set backup
 set dir=~/.vim/swp
 set backupdir=~/.vim/backup
 
+au BufNewFile,BufRead *.ejs set filetype=html
 "pop up menu color
 highlight Pmenu ctermfg=white ctermbg=darkgrey
 highlight PmenuSel ctermfg=white ctermbg=darkblue
@@ -83,8 +84,12 @@ nnoremap <silent> <F3> :TagbarToggle<CR>
 "macvim
 set guifont=Monaco:h14
 if has("gui_running")
-  set transparency=11
+  "set transparency=11
   set guioptions=e
+  set background=dark
+  colorscheme solarized
+else
+  colorscheme smyck
 endif
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
