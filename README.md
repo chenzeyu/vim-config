@@ -1,7 +1,7 @@
 #vim config
 
 ##Add a plugin
-    git submodule add git:repo
+    git submodule foreach git pull
 
 ##Update plugins
     git pull --recursive-submodules
