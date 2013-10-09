@@ -5,13 +5,14 @@ set incsearch
 set autoindent
 "hlsearch setting
 nnoremap <CR> :noh<CR><CR>
-nmap gg=G gg=G''
+nmap 11 gg=G''
 set hlsearch
 "colorscheme smyck
 "colorscheme Monokai-Refined
 set foldmethod=syntax
 set foldlevel=99
 syntax on
+syntax enable
 filetype on
 filetype plugin indent on
 "backup & swp setting
@@ -19,7 +20,6 @@ set backup
 set dir=~/.vim/swp
 set backupdir=~/.vim/backup
 
-au BufNewFile,BufRead *.ejs set filetype=html
 "pop up menu color
 highlight Pmenu ctermfg=white ctermbg=darkgrey
 highlight PmenuSel ctermfg=white ctermbg=darkblue
@@ -69,12 +69,12 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 set laststatus=2
 
 "highlight trailling spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+"highlight ExtraWhitespace ctermbg=red guibg=red
+"match ExtraWhitespace /\s\+$/
+"autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+"autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+"autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+"autocmd BufWinLeave * call clearmatches()
 "F4 clear trailling spaces
 nnoremap <silent> <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 "nerdtree
@@ -84,13 +84,14 @@ nnoremap <silent> <F3> :TagbarToggle<CR>
 "macvim
 set guifont=Monaco:h14
 if has("gui_running")
-  "set transparency=11
+  set transparency=8
   set guioptions=e
   set background=dark
   colorscheme solarized
 else
   colorscheme smyck
 endif
+
 if has("gui_macvim")
   macmenu &File.New\ Tab key=<nop>
   map <D-r> :CommandT<CR>

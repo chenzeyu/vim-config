@@ -31,6 +31,15 @@
 [submodule "submodules/command-t"]
 	path = submodules/command-t
 	url = git://git.wincent.com/command-t.git
-[submodule "submodules/vim-backbone"]
-	path = submodules/vim-backbone
-	url = https://github.com/mklabs/vim-backbone.git
+[submodule "submodules/vim-jst"]
+	path = submodules/vim-jst
+	url = https://github.com/briancollins/vim-jst.git
+[submodule "submodules/vim-coffee-script"]
+	path = submodules/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "submodules/vim-eco"]
+	path = submodules/vim-eco
+	url = https://github.com/AndrewRadev/vim-eco.git
+[submodule "submodules/vim-commentary"]
+	path = submodules/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
