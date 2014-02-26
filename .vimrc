@@ -12,8 +12,6 @@ set hlsearch
 set foldmethod=syntax
 set foldlevel=99
 syntax on
-syntax enable
-filetype on
 filetype plugin indent on
 "backup & swp setting
 set backup
@@ -64,6 +62,12 @@ let g:tagbar_left = 1
 
 "neocomplcache setting
 let g:neocomplcache_enable_at_startup = 1
+
+"trailling space solarized
+let solarized_hitrail = 1
+"python syntax
+let python_highlight_all = 1
+
 "tab completion
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 set laststatus=2
@@ -75,8 +79,10 @@ set laststatus=2
 "autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 "autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 "autocmd BufWinLeave * call clearmatches()
+
 "F4 clear trailling spaces
 nnoremap <silent> <F4> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
 "nerdtree
 map <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <F3> :TagbarToggle<CR>
@@ -88,12 +94,9 @@ if has("gui_running")
   set guioptions=e
   set background=dark
   colorscheme solarized
-else
-  colorscheme smyck
 endif
 
 if has("gui_macvim")
-  macmenu &File.New\ Tab key=<nop>
   map <D-r> :CommandT<CR>
 endif
 

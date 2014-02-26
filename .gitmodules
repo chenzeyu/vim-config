@@ -43,3 +43,9 @@
 [submodule "submodules/vim-commentary"]
 	path = submodules/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "submodules/vim-colors-solarized"]
+	path = submodules/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "submodules/python-syntax"]
+	path = submodules/python-syntax
+	url = https://github.com/hdima/python-syntax.git
