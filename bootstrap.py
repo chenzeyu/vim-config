@@ -8,8 +8,15 @@ if not os.path.exists("backup"):
     print "creating backup directory ... "
     os.mkdir("backup")
 
+if not os.path.exists("bundle"):
+    print "creating bundle directory ... "
+    os.mkdir("bundle")
 
-os.chdir("..")
+os.chdir("bundle")
+
+os.system("git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle")
+
+os.chdir("../..")
 
 if not os.path.exists(".vim"):
     print "renaming 'vim-config' to '.vim' ... "

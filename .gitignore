@@ -1,5 +1,4 @@
 .netrwhist
 swp/
 backup/
-bundle/**
-~bundle/vundle
+bundle/
