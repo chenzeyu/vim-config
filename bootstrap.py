@@ -14,7 +14,9 @@ if not os.path.exists("bundle"):
 
 os.chdir("bundle")
 
-os.system("git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle")
+
+if not os.path.exists("vundle"):
+    os.system("git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle")
 
 os.chdir("../..")
 
@@ -28,5 +30,8 @@ if not os.path.islink(".vimrc"):
 
 print "opening vim with BundleInstall"
 os.system("vim +BundleInstall +qall")
+
+os.chdir(".vim/bundle/Command-T")
+os.system("rake make")
 
 print "all done!"
