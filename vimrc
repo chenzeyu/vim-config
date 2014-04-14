@@ -18,20 +18,20 @@ call vundle#rc()
 
 "let Vundle manage Vundle, required
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 "plugins
-Bundle 'Townk/vim-autoclose'
-Bundle 'tpope/vim-endwise'
-Bundle 'wincent/Command-T'
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-rails'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'hdima/python-syntax'
-Bundle 'Shougo/neocomplete.vim'
+Plugin 'Townk/vim-autoclose'
+Plugin 'tpope/vim-endwise'
+Plugin 'wincent/Command-T'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-rails'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'hdima/python-syntax'
+Plugin 'Shougo/neocomplete.vim'
 "plugin ends here
 
 set textwidth=79
