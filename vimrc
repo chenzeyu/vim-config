@@ -106,6 +106,7 @@ inoremap <expr><C-e>  neocomplete#cancel_popup()
 " Or set this.
 "let g:neocomplete#enable_insert_char_pre = 1
 
+
 " AutoComplPop like behavior.
 "let g:neocomplete#enable_auto_select = 1
 
@@ -158,7 +159,7 @@ map <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <F3> :TagbarToggle<CR>
 
 "macvim
-set guifont=Monaco:h14
+set guifont=Monaco:h13
 if has("gui_running")
   set transparency=8
   set guioptions=e
