@@ -1,15 +1,11 @@
 set nocompatible
-"backup & swp setting
 
-set backup
-set dir=~/.vim/swp
-set backupdir=~/.vim/backup
 set cindent
 set showmatch
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set mouse=a
 
 " set the runtime path to include Vundle and initialize
@@ -21,17 +17,20 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 "plugins
+Plugin 'plasticboy/vim-markdown'
 Plugin 'Townk/vim-autoclose'
-Plugin 'tpope/vim-endwise'
 Plugin 'wincent/Command-T'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-endwise'
 Plugin 'Lokaltog/vim-powerline'
 Plugin 'hdima/python-syntax'
 Plugin 'Shougo/neocomplete.vim'
+
 "plugin ends here
 
 set textwidth=79
